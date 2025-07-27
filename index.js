@@ -48,6 +48,7 @@ const dependencies = [
   "@react-native-firebase/app",
   "@react-native-firebase/messaging",
   "react-native-gesture-handler",
+  "react-native-worklets",
   "react-native-reanimated",
   "@gorhom/bottom-sheet",
   "@gorhom/portal",
@@ -86,6 +87,47 @@ if (fs.existsSync(starterSrcPath)) {
     "\x1b[31mError: 'app' directory not found in the starter.\x1b[0m"
   );
   process.exit(1);
+}
+
+// Step 3.1: Replace root App.tsx with custom one from boilerplate
+const boilerplateAppPath = path.join(__dirname, "App.tsx");
+const projectAppPath = path.join(projectPath, "App.tsx");
+
+if (fs.existsSync(boilerplateAppPath)) {
+  // Delete the default App.tsx from newly created project
+  if (fs.existsSync(projectAppPath)) {
+    fs.unlinkSync(projectAppPath);
+    console.log("\x1b[32mDeleted default App.tsx.\x1b[0m");
+  }
+
+  // Copy custom App.tsx from boilerplate
+  fs.copyFileSync(boilerplateAppPath, projectAppPath);
+  console.log("\x1b[32mCopied custom App.tsx.\x1b[0m");
+} else {
+  console.error(
+    "\x1b[31mError: Custom App.tsx not found in the boilerplate root.\x1b[0m"
+  );
+  process.exit(1);
+}
+
+// Step 3.2: Replace babel.config.js with boilerplate version
+const boilerplateBabelPath = path.join(__dirname, "babel.config.js");
+const projectBabelPath = path.join(projectPath, "babel.config.js");
+
+if (fs.existsSync(boilerplateBabelPath)) {
+  // Delete default babel.config.js if it exists
+  if (fs.existsSync(projectBabelPath)) {
+    fs.unlinkSync(projectBabelPath);
+    console.log("\x1b[32mDeleted default babel.config.js.\x1b[0m");
+  }
+
+  // Copy custom babel.config.js from boilerplate
+  fs.copyFileSync(boilerplateBabelPath, projectBabelPath);
+  console.log("\x1b[32mCopied custom babel.config.js.\x1b[0m");
+} else {
+  console.warn(
+    "\x1b[33mWarning: babel.config.js not found in boilerplate. Skipping this step.\x1b[0m"
+  );
 }
 
 // Step 4: Install dependencies

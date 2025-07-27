@@ -1,6 +1,6 @@
 {
   "name": "react-native-ts-starter-kit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A TypeScript & streamlined React Native starter kit designed to accelerate app development with pre-configured tools, libraries, and a customizable project structure.",
   "main": "index.js",
   "bin": "./index.js",

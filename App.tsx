@@ -3,8 +3,8 @@ import { StatusBar, StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import store, { persistor } from "./store";
-import colors from "./theme/colors";
+import store, { persistor } from "./app/store";
+import colors from "./app/theme/colors";
 
 const App = () => {
   return (
