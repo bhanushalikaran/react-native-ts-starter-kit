@@ -3,20 +3,23 @@ import { StatusBar, StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import store, { persistor } from "./app/store";
-import colors from "./app/theme/colors";
+import store, { persistor } from "./src/services/redux";
+import Root from "./src/app/navigation/Root";
+import { ThemeProvider } from "./src/services/context/ThemeContext";
 
 const App = () => {
   return (
     <GestureHandlerRootView style={styles.root}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <StatusBar
-            translucent={true}
-            backgroundColor={"transparent"}
-            barStyle={"dark-content"}
-          />
-          {/* Children components */}
+          <ThemeProvider>
+            <StatusBar
+              translucent={true}
+              backgroundColor={"transparent"}
+              barStyle={"dark-content"}
+            />
+            <Root />
+          </ThemeProvider>
         </PersistGate>
       </Provider>
     </GestureHandlerRootView>
@@ -26,7 +29,6 @@ const App = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: colors.white,
   },
 });
 

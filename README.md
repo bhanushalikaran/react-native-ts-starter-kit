@@ -1,9 +1,9 @@
 # React Native Project Starter Kit
 
-# Version 1 🚀
+# Version 2 🚀
 
-A TypeScript & streamlined React Native starter kit designed to accelerate app development with pre-configured tools, libraries, and a customizable project structure.
-This script initializes a new React Native project with optional version specification and copies a custom `app` folder from the starter project.
+A customizable TypeScript-based React Native boilerplate built to accelerate mobile app development — complete with pre-configured navigation, Redux, theming, and scalable project architecture.
+This script initializes a new React Native project with optional version specification and copies a custom `src` folder from the starter project.
 
 ## Package Name
 

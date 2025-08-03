@@ -1,7 +1,7 @@
 {
   "name": "react-native-ts-starter-kit",
-  "version": "1.0.2",
-  "description": "A TypeScript & streamlined React Native starter kit designed to accelerate app development with pre-configured tools, libraries, and a customizable project structure.",
+  "version": "2.0.0",
+  "description": "A customizable TypeScript-based React Native boilerplate built to accelerate mobile app development — complete with pre-configured navigation, Redux, theming, and scalable project architecture.",
   "main": "index.js",
   "bin": "./index.js",
   "scripts": {
@@ -13,11 +13,26 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "react-native boilerplate",
+    "react-native starter-kit",
+    "react-native template","boilerplate",
+    "starter-kit",
+    "typescript",
+    "typescript boilerplate",
+    "typescript starter-kit",
+    "typescript template",
+    "react-native typescript",
+    "react-native typescript boilerplate",
+    "react-native typescript starter-kit",
+    "react-native typescript template",
+    "react-native ts",
+    "react-native ts boilerplate",
+    "react-native ts starter-kit"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bhanushalikaran/react-native-ts-starter-kit.git"
+    "url": "https://github.com/bhanushalikaran/react-native-ts-starter-kit.git"
   },
   "author": "Bhanushali Karan <karannakhua123@gmail.com> (https://github.com/bhanushalikaran)",
   "license": "MIT",

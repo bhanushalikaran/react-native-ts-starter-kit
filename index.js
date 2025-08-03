@@ -16,9 +16,9 @@ if (!appName) {
 }
 
 // Define paths
-const starterSrcPath = path.join(__dirname, "app");
+const starterSrcPath = path.join(__dirname, "src");
 const projectPath = path.join(process.cwd(), appName);
-const destinationSrcPath = path.join(projectPath, "app");
+const destinationSrcPath = path.join(projectPath, "src");
 
 // Check for existing project
 if (fs.existsSync(projectPath)) {
@@ -78,13 +78,13 @@ execCommand(
 // Step 2: Navigate to the project directory
 shell.cd(projectPath);
 
-// Step 3: Copy the `app` directory from the starter to the new project
+// Step 3: Copy the `src` directory from the starter to the new project
 if (fs.existsSync(starterSrcPath)) {
   shell.cp("-r", starterSrcPath, destinationSrcPath);
-  console.log("\x1b[32mCopied app directory to the new project.\x1b[0m");
+  console.log("\x1b[32mCopied src directory to the new project.\x1b[0m");
 } else {
   console.error(
-    "\x1b[31mError: 'app' directory not found in the starter.\x1b[0m"
+    "\x1b[31mError: 'src' directory not found in the starter.\x1b[0m"
   );
   process.exit(1);
 }
